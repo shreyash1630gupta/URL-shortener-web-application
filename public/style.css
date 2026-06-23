@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+ 
+}
+
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #14213d;
+  --muted: #5f6b7a;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --border: #d9e2ec;
+  --success: #0f9d58;
+  --danger: #c62828;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: #9cbbf4; */
+  /* background: #EEAECA;
+background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(84, 132, 191, 1) 100%); */
+  background: #b6d0ff;
+  color: var(--text);
+}
+
+.container {
+  width: min(100%, 1000px);
+  min-height: 100vh;
+  height: auto;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  gap: 20px;
+  background-color:#1850b9ae;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(20, 33, 61, 0.06);
+}
+
+.hero h1 {
+  margin: 6px 0 10px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: rgb(11, 11, 117 );
+}
+
+/* .eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  color: var(--primary);
+  font-weight: 700;
+} */
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  color: rgba(82, 82, 167, 0.825)
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+  color: rgb(11, 11, 117 );
+}
+
+label {
+  font-weight: 700;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button#shortenBtn,
+button.primary {
+  background: var(--primary);
+  color: white;
+}
+
+button#shortenBtn:hover,
+button.primary:hover {
+  background: var(--primary-dark);
+}
+
+.secondary-btn {
+  background: #e8eef9;
+  color: var(--text);
+}
+
+.secondary-btn:hover {
+  background: #dbe6f7;
+}
+.history-btn {
+  background: #e8eef9;
+  color: var(--text);
+}
+
+.history-btn:hover {
+  background: #dbe6f7;
+}
+.message {
+  min-height: 24px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.message.success {
+  color: var(--success);
+}
+
+.message.error {
+  color: var(--danger);
+}
+
+.result-box {
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #f8fbff;
+}
+
+.result-text {
+  display: grid;
+  gap: 4px;
+}
+
+.result-text span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.result-text a {
+  word-break: break-all;
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+  color:  rgb(1, 1, 150);
+}
+
+/* .section-heading h2,
+.info-card h2 {
+  margin: 0;
+} */
+
+.history-list {
+  display: grid;
+  gap: 12px;
+  
+}
+
+.history-item {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.history-item .row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.history-item .original {
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.history-item a {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.feature {
+  background: #eef4ff;
+  color: #1e3a8a;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+} */
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 14px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .input-row,
+  .result-box,
+  .section-heading {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+}

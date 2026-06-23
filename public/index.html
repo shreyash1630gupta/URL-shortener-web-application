@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Shortener</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="hero card">
+      <div>
+        <!-- <p class="eyebrow">Node.js • MongoDB • JavaScript</p> -->
+        <h1>URL Shortener Web Application</h1>
+        <p class="subtitle">
+          Paste a long URL, generate a short link, copy it instantly, and view your link history.
+        </p>
+      </div>
+    </section>
+
+    <section class="card form-card">
+      <form id="shortenForm" class="form">
+        <label for="longUrl">Paste your URL</label>
+        <div class="input-row">
+          <input
+            type="url"
+            id="longUrl"
+            name="longUrl"
+            placeholder="https://example.com/verylonglink"
+            required
+          />
+          <button type="submit" id="shortenBtn">Shorten</button>
+        </div>
+      </form>
+
+      <div id="message" class="message"></div>
+
+      <div id="resultBox" class="result-box hidden">
+        <div class="result-text">
+          <span>Short URL</span>
+          <a id="shortUrlAnchor" href="#" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+        <button id="copyBtn" class="secondary-btn">Copy to Clipboard</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <h2>Link History</h2>
+        <button id="refreshBtn" class="secondary-btn">Refresh</button>
+        <button onclick="clearHistory()" class="history-btn">Clear History</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </section>
+
+    <!-- <section class="card info-card">
+      <h2>Features included</h2>
+      <div class="features">
+        <div class="feature">Short-link generation</div>
+        <div class="feature">MongoDB storage</div>
+        <div class="feature">Real-time redirection</div>
+        <div class="feature">Copy-to-clipboard</div>
+        <div class="feature">Link history</div>
+        <div class="feature">Responsive UI</div>
+      </div>
+    </section> -->
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
