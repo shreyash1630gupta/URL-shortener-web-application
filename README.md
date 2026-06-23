@@ -25,7 +25,7 @@ url-shortener-project/
 │   ├── style.css
 │   └── script.js
 ├── package.json
-└── .env.example
+└── .env
 ```
 
 ## Requirements
@@ -68,17 +68,3 @@ http://localhost:5000
 - Opening `http://localhost:5000/<shortCode>` redirects to the original URL
 - `/api/history` returns the latest links
 
-## Interview-friendly explanation
-You can explain this project as:
-- `server.js` handles API routes and redirect logic
-- `models/Url.js` defines the MongoDB schema
-- `index.html` provides the UI
-- `script.js` sends requests and displays results
-- `style.css` makes the UI responsive
-
-## Notes
-If you want to demonstrate the project in an interview, shorten a sample URL like:
-```text
-https://www.google.com
-```
-Then open the generated short link in the browser and show the redirect.
