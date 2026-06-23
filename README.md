@@ -25,6 +25,7 @@ url-shortener-project/
 │   ├── style.css
 │   └── script.js
 ├── package.json
+├── package-lock.json
 └── .env
 ```
 
